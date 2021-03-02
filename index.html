@@ -36,7 +36,7 @@
               <a href="#home" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#about" class="nav-link">My Websites</a>
+              <a href="#about" class="nav-link">My Projects</a>
             </li>
             <li class="nav-item">
               <a href="#contact" class="nav-link">Contact</a>
@@ -54,7 +54,7 @@
             <div class="col">
               <div class="text-center">
                 <h1 class="display-4 mt-5 pt-5">Jorden Hilton</h1>
-                <p class="lead">Software Engineer</p>
+                <p class="lead">Web Developer</p>
               </div>
             </div>
           </div>
@@ -68,10 +68,6 @@
           <div class="col">
             <div class="info-header mb-5">
               <h1 class="text-primary pb-3">View My Projects</h1>
-              <p class="lead pb-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-                cum ipsa molestias asperiores sint perspiciatis.
-              </p>
             </div>
           </div>
         </div>
@@ -80,13 +76,11 @@
           <div class="col-lg-4 col-md-6">
             <div class="card">
               <div class="card-body">
-                <img src="" alt="" class="img-fluid w-50 mb-3" />
-                <h3>Project 1</h3>
-                <h5>tech used</h5>
+                <img src="img/project1.jpg" alt="" class="img-fluid w-50 mb-3" />
+                <h3>Weather App</h3>
+                <h5>HTML CSS Bootstrap JS </h5>
                 <p>
-                  TECHNICAL WRITING Lorem ipsum dolor sit amet consectetur,
-                  adipisicing elit. Incidunt, saepe nostrum optio deserunt sint
-                  commodi.
+                  Fetch current weather data using openweathermap API key
                 </p>
                 <div class="d-flex justify-content-center">
                   <div class="p-4">
@@ -110,13 +104,11 @@
           <div class="col-lg-4 col-md-6">
             <div class="card">
               <div class="card-body">
-                <img src="" alt="" class="img-fluid w-50 mb-3" />
-                <h3>Project 2</h3>
-                <h5>tech used</h5>
+                <img src="img/calculator.jpg" alt="" class="img-fluid w-50 mb-2" />
+                <h3>Calculator</h3>
+                <h5>HTML CSS JS</h5>
                 <p>
-                  TECHNICAL WRITING Lorem ipsum dolor sit amet consectetur,
-                  adipisicing elit. Incidunt, saepe nostrum optio deserunt sint
-                  commodi.
+                  Perform mathematical functions
                 </p>
                 <div class="d-flex justify-content-center">
                   <div class="p-4">
@@ -178,16 +170,17 @@
           <div class="col-lg-9">
             <h3>Get In Touch</h3>
             <p class="lead">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, quam!
+              lets collaborate
             </p>
-            <form action="">
+            <form action="https://formspree.io/f/xnqokobq" method="POST">
               <div class="input-group input-group-lg mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
                     <i class="fas fa-user"></i>
                   </span>
                 </div>
-                <input type="text" class="form-control" placeholder="Name" />
+                <label for="name" required></label>
+                <input type="text" class="form-control" placeholder="Name" required name="name"/>
               </div>
 
               <div class="input-group input-group-lg mb-3">
@@ -196,7 +189,8 @@
                     <i class="far fa-envelope"></i>
                   </span>
                 </div>
-                <input type="text" class="form-control" placeholder="Email" />
+                <label for="email" required></label>
+                <input type="text" class="form-control" placeholder="Email" required name="email"/>
               </div>
 
               <div class="input-group input-group-lg mb-3">
@@ -205,10 +199,13 @@
                     <i class="fas fa-pencil-alt"></i>
                   </span>
                 </div>
+                <label for="text" required></label>
                 <textarea
                   class="form-control"
                   placeholder="Message"
                   rows="5"
+                  required
+                  name="text"
                 ></textarea>
               </div>
 
