@@ -17,10 +17,10 @@
     ></script>
     <title>Jorden</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#main-nav" id="home">
     <!--Start Here-->
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="main-nav">
       <div class="container">
         <a href="index.html" class="navbar-brand">JH</a>
         <button
@@ -36,7 +36,7 @@
               <a href="#home" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#about" class="nav-link">My Projects</a>
+              <a href="#myprojects" class="nav-link">My Projects</a>
             </li>
             <li class="nav-item">
               <a href="#contact" class="nav-link">Contact</a>
@@ -62,7 +62,7 @@
       </div>
     </section>
     <!--My Websites-->
-    <section id="about" class="py-5 text-center bg-light">
+    <section id="myprojects" class="py-5 text-center bg-light">
       <div class="container">
         <div class="row">
           <div class="col">
@@ -254,6 +254,25 @@
     <script>
       //Get the current year for the copyright
       $("#year").text(new Date().getFullYear());
+
+      //Scrollspy
+      $('body').scrollspy({ target: '#main-nav'});
+
+      //Smoothscrolling
+      $("#main-nav a").on('click', function (event) {
+        if(this.hash !== "") {
+          event.preventDefault();
+
+          const hash = this.hash;
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+
+            window.location.hash = hash;
+          });
+        }
+      });
     </script>
   </body>
 </html>
